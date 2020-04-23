@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -10,7 +9,8 @@ import { SettingComponent } from './components/home/setting/setting.component';
 import { PcateComponent } from './components/product/pcate/pcate.component';
 import { PlistComponent } from './components/product/plist/plist.component';
 import { NewsComponent } from './components/news/news.component';
-
+import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
+import { NewsDetailsComponent } from './components/news-details/news-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +20,17 @@ import { NewsComponent } from './components/news/news.component';
     SettingComponent,
     PcateComponent,
     PlistComponent,
-    NewsComponent
+    NewsComponent,
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

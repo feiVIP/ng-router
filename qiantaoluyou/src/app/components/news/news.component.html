@@ -1,3 +1,5 @@
-<p>
-  news works!
-</p>
+<div>
+  <ul *ngFor="let item of list;let i = index;">
+    <li><a [routerLink]="['/news-details/',i]">{{item}}</a></li>
+  </ul>
+</div>

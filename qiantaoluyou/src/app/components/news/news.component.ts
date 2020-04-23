@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
+  list = [];
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    for (let i = 0; i < 10; i++){
+      this.list.push(`这是第${i}数据`);
+    }
   }
 
 }
